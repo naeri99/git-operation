@@ -1,15 +1,15 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: guestbook
+  name: flinkman
   namespace: argocd
 spec:
   destination:
-    namespace: guestbook
+    namespace: flinkman
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: guestbook
+    path: flinktest
     repoURL: git@github.com:naeri99/service-test-repository.git
     targetRevision: HEAD
   syncPolicy:
